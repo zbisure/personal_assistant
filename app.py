@@ -285,7 +285,7 @@ import os
 # download internlm2 to the base_path directory using git tool
 os.system(f'git clone https://code.openxlab.org.cn/isure/personal_assistant.git')
 os.system(f'cd personal_assistant && git lfs pull')
-os.system('ls -h')
+os.system('pwd')
 os.system('ls -h ./personal_assistant')
 os.system('ls -h ./personal_assistant/final_model')
 
