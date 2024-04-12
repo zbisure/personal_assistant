@@ -181,10 +181,10 @@ def on_btn_click():
 
 @st.cache_resource
 def load_model():
-    model = (AutoModelForCausalLM.from_pretrained('/home/xlab-app-center/personal_assistant/final_model',
+    model = (AutoModelForCausalLM.from_pretrained('.personal_assistant/final_model',
                                                   trust_remote_code=True).to(
                                                       torch.bfloat16).cuda())
-    tokenizer = AutoTokenizer.from_pretrained('/home/xlab-app-center/personal_assistant/final_model',
+    tokenizer = AutoTokenizer.from_pretrained('./personal_assistant/final_model',
                                               trust_remote_code=True)
     return model, tokenizer
 
@@ -285,6 +285,9 @@ import os
 # download internlm2 to the base_path directory using git tool
 os.system(f'git clone https://code.openxlab.org.cn/isure/personal_assistant.git')
 os.system(f'cd personal_assistant && git lfs pull')
+os.system('ls -h')
+os.system('ls -h ./personal_assistant')
+os.system('ls -h ./personal_assistant/final_model')
 
 
 
